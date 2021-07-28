@@ -1,36 +1,40 @@
-    let sum;
-    let devide;
-    let subtract;
-    let multiply;
+function sum(number1, number2) {
+	try {
+		console.log(number1 + number2);
+	} catch (err) {
+		console.log(err);
 
-function calculator(a,b) {
-  try {
-      sum = a + b;
-      subtract = a - b;
-      multiply = a * b;
-      if ( 0 == b ) {
-          throw new Error('Error!!! Can`t be divided by 0 ')
-        } else {
-            devide = a/b;
+	}
+}
+
+function substract(number1, number2) {
+	try {
+		console.log(number1 - number2);
+	} catch (err) {
+		console.log(err);
+
+	}
+}
+function multiply(number1, number2) {
+	try {
+		console.log(number1 * number2);
+	} catch (err) {
+		console.log(err);
+
+	}
+}
+function divide(number1, number2) {
+	try {
+        if ( 0 == number2 ) {
+            throw new Error('Error!!! Can`t be divided by 0 ')
+          } else {
+            console.log(number1 / number2);
+          }
+    } catch (err) {
+            console.log(err)
         }
-      } catch (err) {
-          console.log(err)
-      }
 
-      return sum, subtract, multiply, devide;
+}
 
-  }
-
-  calculator(2, 0);
-
-  console.log("a+b = " + sum);
-  console.log("a-b = " + subtract);
-  console.log("a*b = " + multiply);
-  console.log("a/b = " + devide);
-
-  calculator (6,3);
-
-  console.log("a+b = " + sum);
-  console.log("a-b = " + subtract);
-  console.log("a*b = " + multiply);
-  console.log("a/b = " + devide);
+divide(2,0);
+multiply(2,12897);
